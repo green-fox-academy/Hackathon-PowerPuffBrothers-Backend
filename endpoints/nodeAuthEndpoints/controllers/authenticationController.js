@@ -1,6 +1,5 @@
 const { createOrUpdateUser } = require('../services/userService');
-const { verify } = require('../services/authenticationService');
-const authenticationService = require('../services/authenticationService');
+const { verify, logBack } = require('../services/authenticationService');
 const jwt = require('jsonwebtoken');
 
 const googleVerification = (req, res) => {
@@ -35,7 +34,7 @@ const googleVerification = (req, res) => {
 };
 
 const logBack = (req, res) => {
-  authenticationService.logBack(req.googleID).then((user) => {
+  logBack(req.googleID).then((user) => {
     res.status(200).json(user);
   }).catch(() => {
     res.status(401).json({ error: 'Authization failed.' });

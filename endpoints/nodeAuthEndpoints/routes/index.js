@@ -10,7 +10,4 @@ router.get('/auth', googleVerification)
 router.get('/me', verifyJWT, logBack)
 
 
-
-
-
 module.exports = router;
