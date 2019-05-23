@@ -1,0 +1,30 @@
+{
+  "name": "Hackathon-PowerPuffBrothers-Backend",
+  "version": "1.0.0",
+  "start": "nodemon authServer.js",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/green-fox-academy/Hackathon-PowerPuffBrothers-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/green-fox-academy/Hackathon-PowerPuffBrothers-Backend/issues"
+  },
+  "homepage": "https://github.com/green-fox-academy/Hackathon-PowerPuffBrothers-Backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.0",
+    "google-auth-library": "^4.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.5.11",
+    "nodemon": "^1.19.0"
+  }
+}
