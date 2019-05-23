@@ -12080,11 +12080,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Work\\source\\repos\\endpoints\\endpoints\\endpoints.csproj",
-      "projectName": "endpoints",
-      "projectPath": "C:\\Users\\Work\\source\\repos\\endpoints\\endpoints\\endpoints.csproj",
+      "projectUniqueName": "C:\\Users\\Work\\Desktop\\hackathon\\Hackathon-PowerPuffBrothers-Backend\\endpoints\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectName": "WebApplication1",
+      "projectPath": "C:\\Users\\Work\\Desktop\\hackathon\\Hackathon-PowerPuffBrothers-Backend\\endpoints\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
       "packagesPath": "C:\\Users\\Work\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Work\\source\\repos\\endpoints\\endpoints\\obj\\",
+      "outputPath": "C:\\Users\\Work\\Desktop\\hackathon\\Hackathon-PowerPuffBrothers-Backend\\endpoints\\WebApplication1\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
