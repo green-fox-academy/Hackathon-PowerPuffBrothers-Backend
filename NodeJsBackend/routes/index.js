@@ -5,7 +5,7 @@ const {
   googleVerification,
   logBack,
 } = require('../controllers/authenticationController');
-const { uploadController } = require('../controllers/authenticationController')
+const { uploadController } = require('../controllers/uploadController')
 
 
 router.get('/auth', googleVerification)
