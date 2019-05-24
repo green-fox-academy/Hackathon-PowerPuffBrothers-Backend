@@ -1,11 +1,11 @@
 const PORT = 3001;
 const express = require('express');
-const mongoose = require('mongoose');
 require('dotenv').config();
+const mongoose = require('mongoose');
 const app = express();
 const cors = require('cors');
 
-
+app.use(express.json());
 mongoose.connect(process.env.CONNECTION_STRING, {
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -13,7 +13,7 @@ mongoose.connect(process.env.CONNECTION_STRING, {
 });
 
 mongoose.set('useFindAndModify', false);
-
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.options('*', cors());
 app.use(express.json());

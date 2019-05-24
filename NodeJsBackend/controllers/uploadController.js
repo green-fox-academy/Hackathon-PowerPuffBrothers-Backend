@@ -1,7 +1,12 @@
 const multer = require('multer');
+const gridFsStorage = require('multer-gridfs-storage');
+const grid = require('gridfs-stream');
 
 const uploadController = (req, res) => {
-  console.log('done soon');
+  res.header({
+    "Access-Control-Allow-Origin": "*"
+  }).send(req.body)
+
 };
 
 module.exports = {
