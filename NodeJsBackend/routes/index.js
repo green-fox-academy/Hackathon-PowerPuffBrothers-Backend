@@ -1,27 +1,23 @@
 const express = require('express');
-const { verifyJWT } = require('../middlewares/verifyJWT')
+const { verifyJWT } = require('../middlewares/verifyJWT');
 const router = express.Router();
 const {
   googleVerification,
-  logBack,
+  logBack
 } = require('../controllers/authenticationController');
-const { uploadController } = require('../controllers/uploadController')
+const { uploadController } = require('../controllers/uploadController');
 const multer = require('multer');
 const gridFsStorage = require('multer-gridfs-storage');
-const grid = require('gridfs-stream')
-const crypto = require('crypto')
-const mongoose = require('mongoose')
-
-
+const grid = require('gridfs-stream');
+const crypto = require('crypto');
+const mongoose = require('mongoose');
 
 const conn = mongoose.createConnection(process.env.CONNECTION_STRING);
 let gfs;
 conn.once('open', () => {
   gfs = grid(conn.db, mongoose.mongo);
-  gfs.collection('PDFtemplateGenerator')
-})
-
-
+  gfs.collection('PDFtemplateGenerator');
+});
 
 const storage = new gridFsStorage({
   url: process.env.CONNECTION_STRING,
@@ -43,10 +39,11 @@ const storage = new gridFsStorage({
 });
 const upload = multer({ storage });
 
+const { createUserController } = require('../controllers/documentController');
 
-
-router.get('/auth', googleVerification)
-router.get('/me', verifyJWT, logBack)
-router.post('/upload', upload.single('file'), uploadController)
+router.get('/auth', googleVerification);
+router.get('/me', verifyJWT, logBack);
+router.post('/upload', verifyJWT, upload.single('file'), uploadController);
+router.post('/create', createUserController);
 
 module.exports = router;
